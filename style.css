@@ -1,0 +1,108 @@
+
+h1 {
+    color: #776e65;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: normal;
+    height: 100px;
+    line-height: 100px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+}
+
+body {
+    background: #faf8ef;
+}
+
+p {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+    color: #776e65;
+}
+
+.center {
+    width: 502px;
+    margin: auto;
+}
+
+#myCanvas {
+    border:1px solid #d3d3d3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#pi_symbol {
+    float: right;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+button {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    background: #bbada0;
+    border: none;
+    width: 150px;
+    padding: 10px;
+    font-size: 20px;
+    height: 40px;
+    border-radius: 5px;
+    line-height: 20px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+#pausePlayButton {
+    background: #f65e3b;
+}
+
+#inside {
+    color: #4cba6f;
+}
+
+#outside {
+    color: #f65e3b;
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid #d8d4d0;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    position: relative;
+    display: inline-block;
+    width: 502px;
+    margin-bottom: 40px;
+}
+
+.explanations {
+    position: relative;
+}
+
+ul {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 18px;
+    color: #776e65;
+}
+
+a {
+    color: #776e65;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}

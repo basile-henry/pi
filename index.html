@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pi Approximator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+		<link rel="icon" type="image/png" href="pi.png">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+	</head>
+	<body>
+		<div class="center">
+            
+            <h1>Pi Approximator <img id="pi_symbol" src="pi.png"></img></h1>
+            
+			<canvas id="myCanvas">
+				Your browser does not support the HTML5 canvas tag.
+			</canvas>
+
+            <div class="pi_info">
+                <p>
+                    <span class="left">Number of random points:</span>
+                    <span class="right" id="number">0</span>
+                <br/>
+                    <span class="left">Inside the circle:</span>
+                    <span class="right" id="inside">0</span>
+                <br/>
+                    <span class="left">Outside the circle:</span>
+                    <span class="right" id="outside">0</span>
+                <br/>
+                    <span class="left">&pi; approximation:</span>
+                    <span class="right" id="pi" style="float: right;">0.0</span>
+                </p>
+            </div>
+            
+            <br/>
+            <div id="slider"></div>
+            <br/>
+            
+            <div class="buttons">
+                <button class="left" onclick="restart()">
+                    <i class="fa fa-fast-backward"></i> Restart
+                </button>
+                <button class="right" id="pausePlayButton" onclick="pausePlay()">
+                    <i class="fa fa-pause"></i> Pause
+                </button>
+            </div>
+        
+            <br/>
+            <p>
+                <strong>HOW IT WORKS:</strong> Pi Approximator uses <strong>randomness</strong> to estimate what the value of &pi; is.<br/>
+                It uses the fact that the probability for a <strong>random</strong> point inside the square to be also in the circle is equal to &pi;/4.
+            </p>
+            <ul>
+                <li>A<sub>circle</sub> = &pi;r&sup2; </li>
+                <li>A<sub>square</sub> = (2r)&sup2; = 4r&sup2;</li>
+                <li>P = A<sub>circle</sub> / A<sub>square</sub> = &pi;r&sup2; / 4r&sup2; = &pi;/4</li>
+                <li>&pi; = 4P</li>
+            </ul>
+            <hr/>
+            <p>
+                <strong>NOTE:</strong> This method doesn't give very accurate result since many samples are needed for the estimation of &pi; to look like the &pi; we know. We also have to take into account that the method used for generating the random points isn't <a href="http://en.wikipedia.org/wiki/Random_number_generation#.22True.22_random_numbers_vs._pseudo-random_numbers"><i>truly</i> random</a>.
+            </p>
+		</div>
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+        <script src="pi.js"></script>
+	</body>
+</html>
