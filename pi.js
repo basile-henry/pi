@@ -11,10 +11,10 @@ var interval = 100;
 
 $( "#slider" ).slider({
     min: 0,
-    max: 400,
+    max: 300,
     value: 100,
     change: function(event, ui) {
-        interval = Math.pow(10, 4.0 - ui.value/100.0) / 10.0;
+        interval = Math.pow(10, 3.0 - ui.value/100.0);
         
         if (running) {
             clearInterval(myTimer);
@@ -45,9 +45,9 @@ function update() {
 }
 
 function newPoint() {
-	var x = size * Math.random() - size / 2, y = size * Math.random() - size / 2;
+	var x = size * Math.random() - size / 2, y = size * Math.random() - size / 2; // -size/2 <= x,y < size/2
 
-	if (Math.pow(size / 2, 2) > Math.pow(x, 2) + Math.pow(y, 2)) {
+	if (Math.pow(size / 2, 2) >= Math.pow(x, 2) + Math.pow(y, 2)) {               // r = size/2
 		inside++;
 		ctx.fillStyle = "#4cba6f";
 	} else {
